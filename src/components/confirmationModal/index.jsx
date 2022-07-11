@@ -41,7 +41,10 @@ export default function ConfirmationModal({
                 className='rounded-lg px-8 py-2 border  text-white bg-red border-red hover:cursor-pointer hover:bg-white  hover:text-red font-roboto font-bold'
                 onClick={() => {
                   deleteReserve();
-                  setOpen(false);
+                  setTimeout(function () {
+                    setOpen(false);
+                    setMessage('');
+                  }, 2000);
                 }}
               >
                 DELETE
